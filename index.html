@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#050505">
+  <title>EXTRA CITY | Commands</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- شاشة البداية -->
+  <div id="splash" class="splash">
+    <div class="splash-glow"></div>
+    <img src="logo.png" alt="EXTRA CITY" class="splash-logo">
+    <h1>EXTRA CITY</h1>
+    <p>ROLEPLAY SERVER</p>
+    <div class="loader"><span></span></div>
+    <small>جارٍ تحميل الموقع...</small>
+  </div>
+
+  <div id="app" class="app hidden">
+    <header class="topbar">
+      <div class="brand">
+        <img src="logo.png" alt="EXTRA CITY">
+        <div>
+          <strong>EXTRA CITY</strong>
+          <span>ROLEPLAY</span>
+        </div>
+      </div>
+      <button class="ip-copy" id="copyIp">91.121.237.128:7770 <b>نسخ</b></button>
+    </header>
+
+    <main id="pages">
+      <section class="page active" id="home">
+        <div class="hero">
+          <div class="hero-overlay"></div>
+          <div class="hero-content">
+            <span class="tag">EXTRA CITY</span>
+            <h2>أهلاً بك في مدينتك</h2>
+            <p>كل أوامر السيرفر والمعلومات المهمة في مكان واحد.</p>
+            <button class="primary" data-page="commands">استكشف الأوامر</button>
+          </div>
+        </div>
+
+        <div class="quick-title"><span>✦</span> أقسام الموقع</div>
+        <div class="cards">
+          <button class="feature-card" data-page="commands">
+            <span class="icon">⌘</span><strong>الأوامر</strong><small>أوامر المواطن واللاعب</small>
+          </button>
+          <button class="feature-card" data-page="faction">
+            <span class="icon">♜</span><strong>FACTION</strong><small>أوامر المنظمات</small>
+          </button>
+          <button class="feature-card" data-page="gang">
+            <span class="icon">⚔</span><strong>GANG</strong><small>أوامر العصابات</small>
+          </button>
+          <button class="feature-card" data-page="news">
+            <span class="icon">▣</span><strong>الأخبار</strong><small>آخر أخبار السيرفر</small>
+          </button>
+        </div>
+      </section>
+
+      <section class="page" id="commands">
+        <div class="page-title"><span>⌘</span><div><h2>أوامر المواطن</h2><p>اضغط على أي أمر لمعرفة معناه</p></div></div>
+        <div class="command-grid" id="commandsList"></div>
+      </section>
+
+      <section class="page" id="faction">
+        <div class="page-title"><span>♜</span><div><h2>FACTION</h2><p>أوامر قادة وأعضاء المنظمة</p></div></div>
+        <div class="section-label">أوامر القيادة</div>
+        <div class="command-grid" id="factionLeader"></div>
+        <div class="section-label">أوامر الأعضاء</div>
+        <div class="command-grid" id="factionMembers"></div>
+      </section>
+
+      <section class="page" id="gang">
+        <div class="page-title"><span>⚔</span><div><h2>GANG</h2><p>أوامر العصابات</p></div></div>
+        <div class="command-grid" id="gangList"></div>
+      </section>
+
+      <section class="page" id="news">
+        <div class="page-title"><span>▣</span><div><h2>أخبار السيرفر</h2><p>آخر التحديثات والإعلانات</p></div></div>
+        <article class="news-card">
+          <img src="news.png" alt="خبر EXTRA CITY">
+          <div class="news-body">
+            <span class="news-badge">تحديث السيرفر</span>
+            <h3>إعلان مهم بخصوص الفعاليات</h3>
+            <p>** بخصوص الناس لي خسرت دراهم على اللواطا منسيناكمش مرا على مدة نديرو les éventes على لواطا وعلى دراهم وهاذ السيستام درناه باش تزيد قينة الـ VIP والسلام عليكم **</p>
+            <time>EXTRA CITY • NEWS</time>
+          </div>
+
+          <p>**📺 قناة النهار | إعلان إخباري
+📰 عاجل | قناة النهار
+شهدت المدينة اليوم افتتاح الفرع الثاني لسوق السيارات الخاص بالمالك زينو، وذلك بعد النجاح الكبير الذي حققه الفرع الأول.
+
+ويقدم الفرع الثاني خدمات: 🚗 بيع السيارات 💰 شراء السيارات 🔄 تبديل السيارات
+وأكد السيد زينو أن افتتاح هذا الفرع يأتي لتلبية الطلب المتزايد وتقديم خدمات أفضل لسكان المدينة.
+📺 قناة النهار | ننقل الحدث كما هو.**</p>
+            <time>EXTRA CITY • NEWS</time>
+        </div>
+          
+        </article>
+      </section>
+    </main>
+
+    <nav class="bottom-nav">
+      <button class="nav-btn active" data-page="home"><span>⌂</span><small>الرئيسية</small></button>
+      <button class="nav-btn" data-page="commands"><span>⌘</span><small>الأوامر</small></button>
+      <button class="nav-btn" data-page="faction"><span>♜</span><small>Faction</small></button>
+      <button class="nav-btn" data-page="gang"><span>⚔</span><small>Gang</small></button>
+      <button class="nav-btn" data-page="news"><span>▣</span><small>الأخبار</small></button>
+    </nav>
+  </div>
+
+  <div class="toast" id="toast">تم النسخ ✓</div>
+  <div class="modal" id="modal">
+    <div class="modal-box">
+      <button class="close" id="closeModal">×</button>
+      <span class="modal-icon">⌘</span>
+      <h3 id="modalCommand"></h3>
+      <p id="modalMeaning"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
